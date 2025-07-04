@@ -1,0 +1,13 @@
+pipeline {
+  agent any
+
+  environment {
+    DOCKER_IMAGE = 'thenameiswin/devops-demo'
+  }
+
+  stages {
+    stage('Clone Repo') {
+      steps {
+        git 'https://github.com/TheNameIsWin/devops-demo-app.git'
+      }
+    }
