@@ -1,0 +1,16 @@
+name: Env Vars Workflow
+
+on: [push, workflow_dispatch]
+
+jobs:
+  rishi-jobs:
+    runs-on: ubuntu-latest
+    env:
+      NAME: Rishi
+      ROLE: DevOps Engineer
+    steps:
+      - name: Show Name
+        run: echo "my name is $NAME"
+
+      - name: Show Role
+        run: echo "I'm a $ROLE"
